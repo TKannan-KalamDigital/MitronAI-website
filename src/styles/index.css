@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+@import "tailwindcss";
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "DM Sans", sans-serif !important;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  .section-container {
+    @apply w-[96%] md:w-[89%] px-5 md:px-0;
+  }
+}
