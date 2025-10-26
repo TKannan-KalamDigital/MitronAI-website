@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaRegCheckSquare } from "react-icons/fa";
-import logo from "../../assets/Pmodules.png";
+import logo from "../../assets/PModules.png";
 import logoTwo from "../../assets/modules.jpg";
 
 const tabs = [
