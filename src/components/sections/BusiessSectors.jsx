@@ -1,5 +1,5 @@
 import React from "react";
-import businessBg from "../../assets/businessSectors.jpg"; // replace with your image path
+import businessBg from "../../assets/BusinessSectors.jpg"; // replace with your image path
 
 const BusinessSectors = () => {
   const features = [
