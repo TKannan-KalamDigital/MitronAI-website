@@ -13,6 +13,9 @@ import WhyMitran from "./components/sections/WhyMitron";
 import BusinessSectors from "./components/sections/BusiessSectors";
 import Banner from "./components/sections/Banner";
 import TopHeader from "./components/layout/TopHeader";
+import VideoBanner from "./components/sections/VideoBanner";
+import ContactNavbar from "./components/layout/ContactNavbar";
+import TopContactBar from "./components/layout/TopContactBar";
 
 function App() {
   useEffect(() => {
@@ -30,8 +33,11 @@ function App() {
 
   return (
     <>
+      <TopContactBar />
+      <ContactNavbar />
       <Navbar />
-      <TopHeader />
+      <VideoBanner />
+      {/* <TopHeader /> */}
       <Banner />
       <WhoWeAre />
       <WhyMitran />

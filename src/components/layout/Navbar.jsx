@@ -7,12 +7,15 @@ export default function Navbar() {
 
   return (
     <nav
-      className="w-full border-y-[3px] border-transparent"
+      className="w-full border-y-[3px] border-transparent "
       style={{
         borderImage:
           "linear-gradient(90deg, rgba(29,180,222,0.5) 0%, rgba(137,234,67,0.5) 32.21%, rgba(241,245,46,0.5) 66.35%, rgba(221,10,13,0.5) 100%) 1",
       }}
     >
+      {/* Contact */}
+      <div className="section-container mx-auto"></div>
+
       {/* Navbar content */}
       <div className="section-container mx-auto flex items-center justify-between py-3">
         {/* Logo */}
@@ -23,35 +26,53 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <ul className="hidden md:flex items-center gap-8 font-semibold text-black">
             <li>
-              <a href="#products" className="hover:text-sky-500">
-                PRODUCTS
-              </a>
-            </li>
-            <li>
-              <a href="#sectors" className="hover:text-sky-500">
-                SECTORS
-              </a>
-            </li>
-            <li>
-              <a href="#product-modules" className="hover:text-sky-500">
+              <a href="#features" className="hover:text-sky-500">
                 FEATURES
               </a>
             </li>
             <li>
+              <a href="#industries" className="hover:text-sky-500">
+                INDUSTRIES
+              </a>
+            </li>
+            <li>
               <a href="#price" className="hover:text-sky-500">
-                PRICE
+                PRICING
+              </a>
+            </li>
+            <li>
+              <a href="#partner" className="hover:text-sky-500">
+                PARTNER
+              </a>
+            </li>
+            <li>
+              <a href="#contact" className="hover:text-sky-500">
+                CONTACT
+              </a>
+            </li>
+            <li>
+              <a href="#resources" className="hover:text-sky-500">
+                RESOURCES
               </a>
             </li>
           </ul>
         </div>
 
         {/* Button */}
-        <a
-          href="#"
-          className="hidden md:inline-block bg-[#3ce2ae] text-white font-semibold px-5 py-2 rounded-sm hover:bg-[#34ad87] transition-all"
-        >
-          BOOK A DEMO
-        </a>
+        <div className="flex gap-3">
+          <a
+            href="#"
+            className="hidden md:inline-block bg-[#3ce2ae] text-white font-semibold px-5 py-2 rounded-sm hover:bg-[#34ad87] transition-all"
+          >
+            LOGIN
+          </a>
+          <a
+            href="#"
+            className="hidden md:inline-block bg-[#3ce2ae] text-white font-semibold px-5 py-2 rounded-sm hover:bg-[#34ad87] transition-all"
+          >
+            BOOK A DEMO
+          </a>
+        </div>
 
         {/* Mobile Hamburger */}
         <button
@@ -67,30 +88,47 @@ export default function Navbar() {
         <div className="md:hidden bg-white shadow-md border-t">
           <ul className="flex flex-col items-center py-4 space-y-4 font-semibold">
             <li>
-              <a href="#products" onClick={() => setIsOpen(false)}>
-                PRODUCTS
-              </a>
-            </li>
-            <li>
-              <a href="#sectors" onClick={() => setIsOpen(false)}>
-                SECTORS
-              </a>
-            </li>
-            <li>
-              <a href="#product-modules" onClick={() => setIsOpen(false)}>
+              <a href="#features" className="hover:text-sky-500">
                 FEATURES
               </a>
             </li>
             <li>
-              <a href="#price" onClick={() => setIsOpen(false)}>
-                PRICE
+              <a href="#industries" className="hover:text-sky-500">
+                INDUSTRIES
+              </a>
+            </li>
+            <li>
+              <a href="#price" className="hover:text-sky-500">
+                PRICING
+              </a>
+            </li>
+            <li>
+              <a href="#partner" className="hover:text-sky-500">
+                PARTNER
+              </a>
+            </li>
+            <li>
+              <a href="#contact" className="hover:text-sky-500">
+                CONTACT
+              </a>
+            </li>
+            <li>
+              <a href="#resources" className="hover:text-sky-500">
+                RESOURCES
               </a>
             </li>
             <li>
               <a
                 href="#"
                 className="bg-teal-400 text-white px-5 py-2 rounded-sm"
-                onClick={() => setIsOpen(false)}
+              >
+                LOGIN
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="bg-teal-400 text-white px-5 py-2 rounded-sm"
               >
                 BOOK A DEMO
               </a>
