@@ -16,8 +16,13 @@ import TopHeader from "./components/layout/TopHeader";
 import VideoBanner from "./components/sections/VideoBanner";
 import ContactNavbar from "./components/layout/ContactNavbar";
 import TopContactBar from "./components/layout/TopContactBar";
+import ScrollButton from "./components/ui/ScrollButton";
+import BookDemoModal from "./components/ui/BookModalForm";
+import { useState } from "react";
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -35,7 +40,12 @@ function App() {
     <>
       <TopContactBar />
       <ContactNavbar />
-      <Navbar />
+      {/* <Navbar /> */}
+      <Navbar onBookDemoClick={() => setIsModalOpen(true)} />
+      <BookDemoModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
       <VideoBanner />
       {/* <TopHeader /> */}
       <Banner />
@@ -47,6 +57,7 @@ function App() {
       <Pricing />
       <FooterLinks />
       <Footer />
+      <ScrollButton />
     </>
   );
 }

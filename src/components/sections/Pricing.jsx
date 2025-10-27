@@ -3,7 +3,7 @@ import { IoCheckmarkOutline } from "react-icons/io5";
 
 const Pricing = () => {
   const [isYearly, setIsYearly] = useState(false);
-
+  const aosVariants = ["fade-right", "fade-up", "fade-left"];
   const plans = [
     {
       name: "BASIC",
@@ -72,31 +72,36 @@ const Pricing = () => {
 
         {/* Pricing Cards */}
         <div className="flex flex-wrap justify-center gap-x-6 md:-mx-6 -mx-2 gap-y-4">
-          {plans.map((plan, idx) => (
-            <div
-              key={idx}
-              className="w-full md:w-[48%] lg:w-[31%] rounded-xl shadow-md py-7 px-4 lg:px-10 text-center border-4 border-white"
-              style={{ backgroundColor: plan.color }}
-            >
-              <h3 className="text-3xl font-bold mb-4">{plan.name}</h3>
-              <p className="text-3xl font-bold mb-6">
-                ₹ {isYearly ? plan.price * 12 : plan.price}
-              </p>
-              <ul className="text-left space-y-8">
-                {plan.features.map((f, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <IoCheckmarkOutline className="font-extralight mr-3 text-3xl" />
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {plans.map((plan, idx) => {
+            const aos = aosVariants[idx % aosVariants.length]; // cycles through 3 styles
+            return (
+              <div
+                key={idx}
+                className="w-full md:w-[48%] lg:w-[31%] rounded-xl shadow-md py-7 px-4 lg:px-10 text-center border-4 border-white"
+                style={{ backgroundColor: plan.color }}
+              >
+                <div data-aos={aos}>
+                  <h3 className="text-3xl font-bold mb-4">{plan.name}</h3>
+                  <p className="text-3xl font-bold mb-6">
+                    ₹ {isYearly ? plan.price * 12 : plan.price}
+                  </p>
+                  <ul className="text-left space-y-8">
+                    {plan.features.map((f, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <IoCheckmarkOutline className="font-extralight mr-3 text-3xl" />
+                        <span>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
         {/* Footer Text */}
         <div className="text-center mt-16">
-          <p className="text-5xl font-semibold">
+          <p className="text-5xl font-semibold" data-aos="flip-down">
             Billed {isYearly ? "yearly" : "monthly"} along with <br /> actual
             consumption of messages
           </p>

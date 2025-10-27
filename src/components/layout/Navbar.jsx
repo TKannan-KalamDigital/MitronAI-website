@@ -2,7 +2,7 @@ import { useState } from "react";
 import Logo from "../../assets/AI-HeadLogo.png";
 import { IoMenuOutline, IoClose } from "react-icons/io5";
 
-export default function Navbar() {
+export default function Navbar({ onBookDemoClick }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -66,12 +66,12 @@ export default function Navbar() {
           >
             LOGIN
           </a>
-          <a
-            href="#"
+          <button
+            onClick={onBookDemoClick}
             className="hidden md:inline-block bg-[#3ce2ae] text-white font-semibold px-5 py-2 rounded-sm hover:bg-[#34ad87] transition-all"
           >
             BOOK A DEMO
-          </a>
+          </button>
         </div>
 
         {/* Mobile Hamburger */}
@@ -126,12 +126,12 @@ export default function Navbar() {
               </a>
             </li>
             <li>
-              <a
-                href="#"
+              <button
+                onClick={onBookDemoClick}
                 className="bg-teal-400 text-white px-5 py-2 rounded-sm"
               >
                 BOOK A DEMO
-              </a>
+              </button>
             </li>
           </ul>
         </div>
