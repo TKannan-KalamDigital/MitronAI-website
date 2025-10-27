@@ -98,7 +98,7 @@ export default function ProductModules() {
     >
       {/* Section Heading */}
       <div className="heading-section">
-        <h2 className="text-3xl md:text-6xl text-center font-bold mt-10 mb-7">
+        <h2 className="text-4xl lg:text-7xl text-center font-bold mt-10 mb-7">
           Product Modules
         </h2>
       </div>

@@ -47,7 +47,7 @@ const Pricing = () => {
     >
       <div className="section-container mx-auto pb-16 py-6">
         <div className="text-center mb-8  py-6">
-          <h2 className="text-7xl font-bold mb-10">Pricing</h2>
+          <h2 className="text-4xl lg:text-7xl font-bold mb-10">Pricing</h2>
 
           {/* Toggle Buttons */}
           <div className="inline-flex bg-white shadow-md overflow-hidden">

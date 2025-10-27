@@ -35,8 +35,8 @@ const WhyMitran = () => {
         {/* Heading and description */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-start mb-12">
           <div className="pr-0 md:pr-20">
-            <h1 className="text-left py-5 text-3xl md:text-6xl">
-              <span className="font-bold text-4xl md:text-7xl">Why</span> Mitron
+            <h1 className="text-left py-5 text-4xl md:text-7xl">
+              <span className="font-bold text-4xl lg:text-7xl">Why</span> Mitron
               AI
             </h1>
             <p className="mt-5 text-black text-xl md:text-2xl">

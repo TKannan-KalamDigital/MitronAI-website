@@ -9,7 +9,7 @@ const TopHeader = () => {
           alt="chat Logo"
           className="w-full md:w-[200px] h-[100px] object-contain mx-auto"
         />
-        <h2 className="text-4xl md:text-[64px] font-bold text-white text-center mt-">
+        <h2 className="text-4xl lg:text-[64px] font-bold text-white text-center mt-">
           Power your Business with
           <br /> seamless communication
         </h2>

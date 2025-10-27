@@ -13,8 +13,6 @@ export default function Navbar() {
           "linear-gradient(90deg, rgba(29,180,222,0.5) 0%, rgba(137,234,67,0.5) 32.21%, rgba(241,245,46,0.5) 66.35%, rgba(221,10,13,0.5) 100%) 1",
       }}
     >
-      {/* Gradient top & bottom border */}
-
       {/* Navbar content */}
       <div className="section-container mx-auto flex items-center justify-between py-3">
         {/* Logo */}
@@ -49,7 +47,7 @@ export default function Navbar() {
 
         {/* Button */}
         <a
-          href="#book"
+          href="#"
           className="hidden md:inline-block bg-[#3ce2ae] text-white font-semibold px-5 py-2 rounded-sm hover:bg-[#34ad87] transition-all"
         >
           BOOK A DEMO
@@ -79,7 +77,7 @@ export default function Navbar() {
               </a>
             </li>
             <li>
-              <a href="#features" onClick={() => setIsOpen(false)}>
+              <a href="#product-modules" onClick={() => setIsOpen(false)}>
                 FEATURES
               </a>
             </li>
@@ -90,7 +88,7 @@ export default function Navbar() {
             </li>
             <li>
               <a
-                href="#book"
+                href="#"
                 className="bg-teal-400 text-white px-5 py-2 rounded-sm"
                 onClick={() => setIsOpen(false)}
               >

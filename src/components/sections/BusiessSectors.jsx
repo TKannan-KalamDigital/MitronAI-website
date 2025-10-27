@@ -61,7 +61,7 @@ const BusinessSectors = () => {
 
         {/* Overlay text */}
         <div className="absolute bottom-0 left-0 w-full text-center bg-black/10 ">
-          <h2 className="text-5xl lg:text-7xl font-extrabold text-black bg-[#D9D9D999] py-6">
+          <h2 className="text-4xl lg:text-7xl font-extrabold text-black bg-[#D9D9D999] py-6">
             Business Sectors
           </h2>
         </div>

@@ -39,7 +39,7 @@ const Features = () => {
       <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Title */}
-      <h2 className="text-xl z-20 text-white relative md:text-7xl font-bold mb-10 text-center">
+      <h2 className=" z-20 text-white relative text-4xl lg:text-7xl font-bold mb-10 text-center">
         Product Features
       </h2>
 

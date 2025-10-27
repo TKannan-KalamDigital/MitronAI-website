@@ -6,8 +6,8 @@ const WhoWeAre = () => {
     <section className="bg-[#E3F1FF] w-full pt-10 pb-20">
       <div className="section-container mx-auto">
         {/* Heading */}
-        <h1 className="text-left py-5 text-3xl md:text-6xl">
-          <span className="font-bold text-4xl md:text-7xl">Who</span> we are?
+        <h1 className="text-left py-5 text-4xl md:text-7xl">
+          <span className="font-bold text-4xl lg:text-7xl">Who</span> we are?
         </h1>
 
         {/* Content layout */}
