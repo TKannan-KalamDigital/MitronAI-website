@@ -4,18 +4,10 @@ import { FaArrowUp } from "react-icons/fa";
 const ScrollButton = () => (
   <ScrollToTop
     smooth
-    component={<FaArrowUp className="text-xl transform -translate-1/2 " />}
-    style={{
-      position: "fixed",
-      bottom: "120px",
-      right: "33px",
-      backgroundColor: "#a3a3a3",
-      color: "#000",
-      borderRadius: "50%",
-      padding: "19px",
-      zIndex: 1000,
-      boxShadow: "0 2px 8px rgba(0,0,0,0.2)",
-    }}
+    component={<FaArrowUp className="text-lg" />}
+    className="!fixed !bottom-[120px] !right-[70px] sm:!right-[30px] lg:!right-[30px] !bg-red-400 hover:!bg-red-500 
+                !text-white !rounded-full !p-[11px] !cursor-pointer 
+                !shadow-md hover:!shadow-lg transition-all duration-300 !z-[1000]"
   />
 );
 

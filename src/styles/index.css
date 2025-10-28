@@ -1,7 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 @import "tailwindcss";
 
+/* ✅ Define theme-level fonts */
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+  --font-raleway: "Raleway", sans-serif;
+}
+
+/* ✅ Base layer styles */
 @layer base {
   *,
   *::before,
@@ -9,13 +16,58 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "DM Sans", sans-serif !important;
   }
-
   html {
+    font-family: var(--font-poppins);
     scroll-behavior: smooth;
   }
+
+  body {
+    font-family: var(--font-poppins);
+  }
+
+  .font-raleway {
+    font-family: var(--font-raleway);
+  }
+
   .section-container {
     @apply w-[96%] md:w-[89%] px-5 md:px-0;
+  }
+}
+.tracking-in-contract-bck-bottom {
+  -webkit-animation: tracking-in-contract-bck-bottom 1s ease-in-out both;
+  animation: tracking-in-contract-bck-bottom 1s ease-in-out both;
+}
+
+@-webkit-keyframes tracking-in-contract-bck-bottom {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px) translateY(300px);
+    transform: translateZ(400px) translateY(300px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract-bck-bottom {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px) translateY(300px);
+    transform: translateZ(400px) translateY(300px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
   }
 }

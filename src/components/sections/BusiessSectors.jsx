@@ -69,7 +69,10 @@ const BusinessSectors = () => {
 
       {/* Description section */}
       <div className="section-container mx-auto  py-10 px-3 md:px-8 text-center">
-        <p className="w-full md:w-3/4 mx-auto text-black text-base md:text-xl text-left leading-relaxed">
+        <p
+          className="w-full md:w-3/4 mx-auto text-black text-base md:text-xl text-left leading-relaxed"
+          data-aos="fade-up"
+        >
           AI-powered virtual assistant designed to automate and streamline
           communication, improve customer engagement. Built with natural
           language understanding, it can handle queries, provide instant

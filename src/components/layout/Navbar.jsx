@@ -1,82 +1,99 @@
 import { useState } from "react";
-import Logo from "../../assets/AI-HeadLogo.png";
+import Logo from "../../assets/NavbarLogo.jpg";
 import { IoMenuOutline, IoClose } from "react-icons/io5";
+import { FaChevronDown } from "react-icons/fa";
 
-export default function Navbar({ onBookDemoClick }) {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav
-      className="w-full border-y-[3px] border-transparent "
+      className="w-full border-b-4 border-transparent"
       style={{
         borderImage:
           "linear-gradient(90deg, rgba(29,180,222,0.5) 0%, rgba(137,234,67,0.5) 32.21%, rgba(241,245,46,0.5) 66.35%, rgba(221,10,13,0.5) 100%) 1",
       }}
     >
       {/* Contact */}
-      <div className="section-container mx-auto"></div>
+      <div className=""></div>
 
       {/* Navbar content */}
-      <div className="section-container mx-auto flex items-center justify-between py-3">
+      <div className="md:px-10 px-7 flex items-center justify-between py-3">
         {/* Logo */}
-        <div className="flex items-center gap-2 -mx-5">
-          <a href="#" id="#home">
-            <img src={Logo} alt="Logo" className="w-24 h-14 object-contain" />
+        <div className="flex items-center gap-2 -mx-5 ">
+          <a href="#" id="#home" className="md:mr-5">
+            <img src={Logo} alt="Logo" className="w-40 h-auto object-contain" />
           </a>
           {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center gap-8 font-semibold text-black">
+          <ul className="hidden md:flex items-center gap-8 font-600 text-black text-sm">
             <li>
-              <a href="#features" className="hover:text-sky-500">
+              <a
+                href="#features"
+                className="hover:text-teal-700 flex items-center gap-x-1.5 group relative"
+              >
                 FEATURES
+                <FaChevronDown className="text-xs font-light transition-transform duration-300 group-hover:rotate-180" />
               </a>
             </li>
             <li>
-              <a href="#industries" className="hover:text-sky-500">
-                INDUSTRIES
+              <a
+                href="#industries"
+                className="hover:text-teal-700 flex items-center gap-x-1.5 group relative"
+              >
+                INDUSTRIES{" "}
+                <FaChevronDown className="text-xs font-light transition-transform duration-300 group-hover:rotate-180" />
               </a>
             </li>
             <li>
-              <a href="#price" className="hover:text-sky-500">
-                PRICING
+              <a
+                href="#price"
+                className="hover:text-teal-700 flex items-center gap-x-1.5 group relative"
+              >
+                PRICING{" "}
+                <FaChevronDown className="text-xs font-light transition-transform duration-300 group-hover:rotate-180" />
               </a>
             </li>
             <li>
-              <a href="#partner" className="hover:text-sky-500">
-                PARTNER
+              <a
+                href="#partner"
+                className="hover:text-teal-700 flex items-center gap-x-1.5 group relative"
+              >
+                PARTNER{" "}
+                <FaChevronDown className="text-xs font-light transition-transform duration-300 group-hover:rotate-180" />
               </a>
             </li>
             <li>
-              <a href="#contact" className="hover:text-sky-500">
+              <a
+                href="#contact"
+                className="hover:text-teal-700 flex items-center gap-x-1.5 group relative"
+              >
                 CONTACT
+                <FaChevronDown className="text-xs font-light transition-transform duration-300 group-hover:rotate-180" />
               </a>
             </li>
             <li>
-              <a href="#resources" className="hover:text-sky-500">
-                RESOURCES
+              <a
+                href="#resources"
+                className="hover:text-teal-700 flex items-center gap-x-1.5 group relative"
+              >
+                RESOURCES{" "}
+                <FaChevronDown className="text-xs font-light transition-transform duration-300 group-hover:rotate-180" />
               </a>
             </li>
           </ul>
         </div>
 
-        {/* Button */}
-        <div className="flex gap-3">
-          <a
-            href="#"
-            className="hidden md:inline-block bg-[#3ce2ae] text-white font-semibold px-5 py-2 rounded-sm hover:bg-[#34ad87] transition-all"
-          >
-            LOGIN
-          </a>
-          <button
-            onClick={onBookDemoClick}
-            className="hidden md:inline-block bg-[#3ce2ae] text-white font-semibold px-5 py-2 rounded-sm hover:bg-[#34ad87] transition-all"
-          >
-            BOOK A DEMO
-          </button>
-        </div>
+        <a
+          href="https://kalam-demo-chat-02-buezcmdjamhxhjb4.centralindia-01.azurewebsites.net/dashboard"
+          target="_blank"
+          className="hidden md:inline-block text-sm bg-[#3ce2ae] text-white font-semibold px-4 py-1.5 rounded-sm hover:bg-[#34ad87] transition-all"
+        >
+          LOGIN
+        </a>
 
         {/* Mobile Hamburger */}
         <button
-          className="md:hidden text-gray-900"
+          className="md:hidden text-gray-900 "
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <IoClose size={26} /> : <IoMenuOutline size={26} />}
@@ -88,50 +105,67 @@ export default function Navbar({ onBookDemoClick }) {
         <div className="md:hidden bg-white shadow-md border-t">
           <ul className="flex flex-col items-center py-4 space-y-4 font-semibold">
             <li>
-              <a href="#features" className="hover:text-sky-500">
-                FEATURES
-              </a>
-            </li>
-            <li>
-              <a href="#industries" className="hover:text-sky-500">
-                INDUSTRIES
-              </a>
-            </li>
-            <li>
-              <a href="#price" className="hover:text-sky-500">
-                PRICING
-              </a>
-            </li>
-            <li>
-              <a href="#partner" className="hover:text-sky-500">
-                PARTNER
-              </a>
-            </li>
-            <li>
-              <a href="#contact" className="hover:text-sky-500">
-                CONTACT
-              </a>
-            </li>
-            <li>
-              <a href="#resources" className="hover:text-sky-500">
-                RESOURCES
+              <a
+                href="#features"
+                className="hover:text-teal-700 flex items-center gap-x-1.5 group relative"
+              >
+                FEATURES{" "}
+                <FaChevronDown className="text-xs font-light transition-transform duration-300 group-hover:rotate-180" />
               </a>
             </li>
             <li>
               <a
-                href="#"
-                className="bg-teal-400 text-white px-5 py-2 rounded-sm"
+                href="#industries"
+                className="hover:text-teal-700 flex items-center gap-x-1.5 group relative"
               >
-                LOGIN
+                INDUSTRIES{" "}
+                <FaChevronDown className="text-xs font-light transition-transform duration-300 group-hover:rotate-180" />
               </a>
             </li>
             <li>
-              <button
-                onClick={onBookDemoClick}
-                className="bg-teal-400 text-white px-5 py-2 rounded-sm"
+              <a
+                href="#price"
+                className="hover:text-teal-700 flex items-center gap-x-1.5 group relative"
               >
-                BOOK A DEMO
-              </button>
+                PRICING{" "}
+                <FaChevronDown className="text-xs font-light transition-transform duration-300 group-hover:rotate-180" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#partner"
+                className="hover:text-teal-700 flex items-center gap-x-1.5 group relative"
+              >
+                PARTNER{" "}
+                <FaChevronDown className="text-xs font-light transition-transform duration-300 group-hover:rotate-180" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contact"
+                className="hover:text-teal-700 flex items-center gap-x-1.5 group relative"
+              >
+                CONTACT{" "}
+                <FaChevronDown className="text-xs font-light transition-transform duration-300 group-hover:rotate-180" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#resources"
+                className="hover:text-teal-700 flex items-center gap-x-1.5 group relative"
+              >
+                RESOURCES{" "}
+                <FaChevronDown className="text-xs font-light transition-transform duration-300 group-hover:rotate-180" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://kalam-demo-chat-02-buezcmdjamhxhjb4.centralindia-01.azurewebsites.net/dashboard"
+                target="_blank"
+                className="bg-teal-400 text-white px-4 py-1.5 rounded-sm"
+              >
+                LOGIN
+              </a>
             </li>
           </ul>
         </div>
@@ -234,7 +268,7 @@ export default function Navbar({ onBookDemoClick }) {
 //             >
 //               <a
 //                 href="#products"
-//                 className="hover:text-sky-500 flex items-center gap-1"
+//                 className="hover:text-teal-700 flex items-center gap-1"
 //               >
 //                 PRODUCTS
 //                 <IoChevronDownOutline className="w-4 h-4" />
@@ -246,7 +280,7 @@ export default function Navbar({ onBookDemoClick }) {
 //             >
 //               <a
 //                 href="#sectors"
-//                 className="hover:text-sky-500 flex items-center gap-1"
+//                 className="hover:text-teal-700 flex items-center gap-1"
 //               >
 //                 SECTORS
 //                 <IoChevronDownOutline className="w-4 h-4" />
@@ -258,14 +292,14 @@ export default function Navbar({ onBookDemoClick }) {
 //             >
 //               <a
 //                 href="#product-modules"
-//                 className="hover:text-sky-500 flex items-center gap-1"
+//                 className="hover:text-teal-700 flex items-center gap-1"
 //               >
 //                 FEATURES
 //                 <IoChevronDownOutline className="w-4 h-4" />
 //               </a>
 //             </li>
 //             <li onMouseEnter={() => setActiveMegaMenu(null)}>
-//               <a href="#price" className="hover:text-sky-500">
+//               <a href="#price" className="hover:text-teal-700">
 //                 PRICE
 //               </a>
 //             </li>
@@ -310,7 +344,7 @@ export default function Navbar({ onBookDemoClick }) {
 //                           href="#"
 //                           className="block hover:bg-gray-50 p-2 rounded transition-colors"
 //                         >
-//                           <div className="font-semibold text-gray-700 hover:text-sky-500">
+//                           <div className="font-semibold text-gray-700 hover:text-teal-700">
 //                             {item.name}
 //                           </div>
 //                           <div className="text-sm text-gray-500">

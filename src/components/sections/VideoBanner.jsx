@@ -2,10 +2,10 @@ import React from "react";
 import BannerVideo from "../../assets/video/Banner.mp4";
 const VideoBanner = () => {
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full h-[calc(100vh-92px)] overflow-hidden">
       {/* Background Video */}
       <video
-        className="absolute inset-0 w-full  h-screen  object-cover"
+        className="absolute inset-0 w-full  h-[calc(100vh-92px)]  object-cover"
         src={BannerVideo}
         autoPlay
         muted
@@ -16,11 +16,8 @@ const VideoBanner = () => {
       <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Center Content */}
-      <div
-        className="relative z-10 flex items-center justify-center h-full"
-        data-aos="fade-down"
-      >
-        <h1 className="text-white text-2xl md:text-6xl font-bold text-center px-4 uppercase md:leading-20">
+      <div className="relative z-10 flex items-center justify-center h-full tracking-in-contract-bck-bottom">
+        <h1 className="text-white text-3xl md:text-7xl  font-extralight text-center px-4 capitalize md:leading-20 ">
           Power your Business with <br /> seamless communication
         </h1>
       </div>

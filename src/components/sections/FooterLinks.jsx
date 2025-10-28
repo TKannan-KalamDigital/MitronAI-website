@@ -12,7 +12,10 @@ const FooterLinks = () => {
           <img src={logo} alt="Mitron AI Logo" className="w-80 md:w-72 mb-3" />
         </div>
         {/* Right */}
-        <div className="md:w-1/2 grid grid-cols-1 sm:grid-cols-3 gap-8 text-sm font-semibold">
+        <div
+          className="md:w-1/2 grid grid-cols-1 sm:grid-cols-3 gap-8 text-sm font-semibold"
+          data-aos="zoom-out"
+        >
           {/* Column 1 */}
           <div>
             <ul className="space-y-2">
